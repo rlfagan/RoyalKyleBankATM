@@ -21,4 +21,4 @@ jobs:
       - name: "Run FOSSA Test"
         uses: fossas/fossa-action@v1
         with:
-          api-key: ${{secrets.fossaApiKey}}
+          api-key: ${{8229158d3befa3c8ee0db34e3714e394}}
