@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - '*'
-
 jobs:
   fossa-scan:
     runs-on: ubuntu-latest
@@ -15,10 +14,6 @@ jobs:
           echo ${{secrets.npmAuth}} >> ~/.npmrc
           yarn --frozen-lockfile
       - name: "Run FOSSA Scan"
-        uses: fossas/fossa-action@v1
-        with:
-          api-key: ${{secrets.fossaApiKey}}
-      - name: "Run FOSSA Test"
         uses: fossas/fossa-action@v1
         with:
           api-key: 8229158d3befa3c8ee0db34e3714e394
