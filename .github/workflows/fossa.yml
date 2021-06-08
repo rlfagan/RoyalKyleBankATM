@@ -13,7 +13,6 @@ jobs:
         run: |
           echo ${{secrets.npmAuth}} >> ~/.npmrc
           yarn --frozen-lockfile
-      - name: "Run FOSSA Test"
       - name: "Run FOSSA Scan"
         uses: fossas/fossa-action@v1
         with:
