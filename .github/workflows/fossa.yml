@@ -17,3 +17,6 @@ jobs:
         uses: fossas/fossa-action@v1
         with:
           api-key: 8229158d3befa3c8ee0db34e3714e394
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
