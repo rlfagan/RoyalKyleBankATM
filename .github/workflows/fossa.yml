@@ -13,9 +13,10 @@ jobs:
         run: |
           echo ${{secrets.npmAuth}} >> ~/.npmrc
           yarn --frozen-lockfile
-      - name: "Run FOSSA Scan"
+      - name: "Run FOSSA Test"
         uses: fossas/fossa-action@v1
         with:
+          run-tests: true
           api-key: 8229158d3befa3c8ee0db34e3714e394
         if: ${{ success() }}
       - name: create PR
