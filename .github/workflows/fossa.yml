@@ -18,7 +18,7 @@ jobs:
         with:
           run-tests: true
           api-key: 8229158d3befa3c8ee0db34e3714e394
-        if: ${{ success() }}
+        if: ${{ failure() }}
       - name: create PR
         uses: peter-evans/create-pull-request@v3    
         
